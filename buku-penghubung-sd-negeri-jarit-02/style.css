@@ -1,0 +1,158 @@
+:root{
+  --blue-900:#1E3A8A;
+  --blue-700:#1D4ED8;
+  --blue-500:#3B82F6;
+  --blue-50:#EFF6FF;
+  --red:#DC2626;
+  --green:#16A34A;
+  --ink:#0F172A;
+  --muted:#64748B;
+  --line:#E2E8F0;
+  --bg:#F1F5F9;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Segoe UI',system-ui,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.5;
+  min-height:100vh;
+}
+
+/* ========== LANDING ========== */
+body.landing{
+  display:flex;
+  flex-direction:column;
+}
+.landing-header{
+  background:linear-gradient(160deg,var(--blue-900),var(--blue-700));
+  color:#fff;
+  padding:60px 20px 40px;
+  text-align:center;
+}
+.landing-header .logo{font-size:64px;margin-bottom:12px;}
+.landing-header h1{font-size:28px;font-weight:800;margin-bottom:6px;}
+.landing-header .subtitle{font-size:14px;opacity:.85;}
+.landing-main{
+  flex:1;
+  max-width:900px;
+  margin:0 auto;
+  padding:40px 20px;
+  width:100%;
+}
+.landing-main h2{
+  font-size:20px;
+  margin-bottom:20px;
+  color:var(--blue-900);
+}
+.portal-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+@media(min-width:640px){
+  .portal-grid{grid-template-columns:1fr 1fr;}
+}
+.portal-card{
+  display:block;
+  background:#fff;
+  border:2px solid var(--line);
+  border-radius:16px;
+  padding:32px 24px;
+  text-decoration:none;
+  color:var(--ink);
+  transition:.2s;
+  box-shadow:0 2px 8px rgba(15,23,42,.06);
+}
+.portal-card:hover{
+  border-color:var(--blue-500);
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(30,64,175,.15);
+}
+.portal-icon{font-size:48px;margin-bottom:12px;}
+.portal-title{
+  font-size:20px;
+  font-weight:700;
+  color:var(--blue-900);
+  margin-bottom:8px;
+}
+.portal-desc{font-size:14px;color:var(--muted);line-height:1.5;}
+.landing-footer{
+  background:#fff;
+  border-top:1px solid var(--line);
+  padding:16px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+.note{
+  margin-top:24px;
+  padding:14px;
+  background:#FFFBEB;
+  border:1px solid #FDE68A;
+  border-radius:10px;
+  font-size:13px;
+  color:#78350F;
+  text-align:center;
+}
+
+/* ========== PORTAL GURU & WALI ========== */
+.topbar{
+  height:60px;
+  background:var(--blue-900);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  padding:0 16px;
+  gap:12px;
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.topbar .brand{font-weight:700;font-size:15px;}
+.topbar .brand small{font-size:11px;opacity:.75;margin-left:6px;}
+.topbar .user{margin-left:auto;font-size:13px;background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;}
+.container{max-width:1000px;margin:0 auto;padding:20px 16px;}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:16px;
+  box-shadow:0 2px 8px rgba(15,23,42,.06);
+}
+.card h2{font-size:18px;color:var(--blue-900);margin-bottom:14px;}
+.btn{
+  display:inline-block;
+  padding:11px 20px;
+  border:none;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  font-family:inherit;
+  cursor:pointer;
+  text-decoration:none;
+  transition:.15s;
+}
+.btn-primary{background:var(--blue-700);color:#fff;}
+.btn-primary:hover{background:var(--blue-900);}
+.btn-ghost{background:#fff;color:var(--blue-700);border:1.5px solid var(--line);}
+.btn-ghost:hover{background:var(--blue-50);}
+
+/* Placeholder untuk portal yang belum jadi */
+.placeholder{
+  text-align:center;
+  padding:60px 20px;
+  color:var(--muted);
+}
+.placeholder .icon{font-size:64px;margin-bottom:16px;}
+.placeholder h2{color:var(--blue-900);margin-bottom:8px;}
+.placeholder p{font-size:14px;line-height:1.6;max-width:400px;margin:0 auto;}
+.placeholder code{
+  background:var(--blue-50);
+  padding:2px 8px;
+  border-radius:6px;
+  color:var(--blue-900);
+  font-size:12px;
+}
